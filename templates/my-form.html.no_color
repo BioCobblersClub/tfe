@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/typeahead.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="{{ url_for('static', filename='styles/typeahead.js') }}" async></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Topiary Frontend</h1>
+    <div class="container">
+  <h2>Select HLA types</h2>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Type A</th>
+        <th>Type B</th>
+        <th>Type C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:01</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:01</label></div></td>
+	<td><div class="checkbox"><label><input type="checkbox" value="">2:01</label></div></td>
+      </tr>
+      <tr>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:02</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:02</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:02</label></div></td>
+      </tr>	    
+      <tr>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:03</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:03</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="">2:03</label></div></td>
+      </tr>
+      <tr>
+        <td><div class="form-group"><label for="usr">Other TypeA:</label><input type="text" class="form-control" id="usr"></div></td>
+        <td><div class="form-group"><label for="usr">Other TypeB:</label><input type="text" class="form-control" id="usr"></div></td>
+        <td><div class="form-group"><label for="usr">Other TypeC:</label><input type="text" class="form-control" id="usr"></div></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  <h2>Enter Gene and Mutation</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+	<td>
+             <div class="form-group">
+            <label for="query">Search:</label>
+            <input class="form-control" name="query" id="query" placeholder="Start typing something to search..." type="text">              
+        </div>
+        </td>
+	<td><div class="form-group"><label for="usr">Nucleotide change(2569A>G):</label><input type="text" class="form-control" id="usr"></div></td>
+       <td><p>OR</p></td>
+       <td><div class="form-group"><label for="usr">Amino Acid change (M887V):</label><input type="text" class="form-control" id="usr"></div></td>  
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
+    <form action="." method="POST">
+        <input type="hidden" value="7 55191822 T G HLA-A*02:01">
+        <input type="submit" name="my-form" value="Submit">
+    </form> 
+</div>
+
+</body>
+</html>
